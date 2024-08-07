@@ -82,7 +82,7 @@ Thank you for interest in our work and please do contact me to ask any questions
 <br>
 
 ## Summary of Files in Repository
-[Unfortunately, we are unable to share the data for this project publicly due to data-protection regulation (i.e., GDPR) and concerns around commercial sensitivity](https://www.centrefornetzero.org/data-privacy-and-ethics-statement/). Accordingly, only some of the files below are available to those external to the organisation. Individuals employed by the Octopus Energy Group who wish to reproduce our work should see the internal version of this repository which includes the requisite data files.
+[Unfortunately, we are unable to share the data for this project publicly due to data-protection regulation (i.e., GDPR) and concerns around commercial sensitivity](https://www.centrefornetzero.org/data-privacy-and-ethics-statement/). Accordingly, only some of the files below are available to those external to the organisation. Individuals employed by the Octopus Energy Group who wish to reproduce our work should contact us to access the internal version of this repository which includes all requisite data files.
 
 In full, the repository contains the following files:  
 
