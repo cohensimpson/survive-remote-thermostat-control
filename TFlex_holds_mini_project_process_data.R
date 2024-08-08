@@ -16,8 +16,7 @@ hold_events = readr::read_csv(
         esi_id = readr::col_character(),
         
         accountstatus_postcode = readr::col_character(),
-        ESIID_postcode = readr::col_character(),
-        accountstatus_postcode = readr::col_character(), 
+        ESIID_postcode = readr::col_character(), 
         
         first_name = readr::col_character(), 
         last_name = readr::col_character(), 
