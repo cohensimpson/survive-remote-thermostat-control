@@ -119,6 +119,8 @@ In full, the repository contains the following files:
 27. `*TFlex_holds_mini_project_workspace (2024-07-04).RData` ([Complete R Workspace/Environment Post Data Load/Transformation + Model Estimation w/ Posterior Predictive Draws](https://stackoverflow.com/a/40862433): **Not Public**)
 28. `rstanarm-feature-survival.zip` (R Software: Copy of GitHub Development Branch of ["rstanarm" that allows estimation of survival models](https://discourse.mc-stan.org/t/stan-surv-in-rstanarm/26812))
 
+<br>
+
 > [!CAUTION]
 > To avoid exhaustion of computing resources, if needed, please be sure to change the settings for model estimation and posterior prediction to accomodate your number of CPU cores and the amount of availiable RAM. This can be done on Lines 206-215 in `TFlex_holds_mini_project_results_estimate_models.R`. See also Lines 17-23 in `TFlex_holds_mini_project_results_figure_survfit_basehazfit.R` and Lines 9-14 in `TFlex_holds_mini_project_results_figure_survival_fitted_values.R`.
 
