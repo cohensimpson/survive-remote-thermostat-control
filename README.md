@@ -86,7 +86,7 @@ Thank you for your interest in our research and please do contact us to ask any 
 <br>
 
 ## Summary of Files in Repository
-[Unfortunately, we are unable to share the data for this project publicly due to data-protection regulation (i.e., GDPR) and concerns around commercial sensitivity](https://www.centrefornetzero.org/data-privacy-and-ethics-statement/). Accordingly, only some of the files below are available to those external to the organisation. Individuals employed by the Octopus Energy Group who wish to reproduce our work should contact us to access the internal version of this repository which includes all requisite data files.
+[Unfortunately, we are unable to share the data for this project publicly due to data-protection regulation (i.e., GDPR) and concerns around commercial sensitivity](https://www.centrefornetzero.org/data-privacy-and-ethics-statement/). Accordingly, only some of the files below are available to those external to the organisation. Individuals employed by the Octopus Energy Group who wish to reproduce our work should contact us to access the internal version of this repository which includes all requisite data files, including those too large to store here (e.g., hourly temperature data).
 
 In full, the repository contains the following files:  
 
@@ -108,10 +108,10 @@ In full, the repository contains the following files:
 16. `TFlex_roster_hold_events_any_length_as_of_May_30_2024 (2024-06-06).csv` (OEUS Data: **Not Public**)
 17. `TFlex_roster_hold_events_frequency_any_length_as_of_May_30_2024 (2024-06-06).csv` (OEUS Data: **Not Public**)
 18. `TFlex_roster_hold_events_customer_quarter_hourly_kwh_since_Oct_2022 (2024-06-06).csv` (OEUS Data: **Not Public**)
-19. `*tx_zctas_2020_geometry.rds` (Public Data From: U.S. Census Bureau via ["tigris"](https://github.com/walkerke/tigris))
-20. `*tx_zctas_2020_geometry_polygon.rds` (Public Data From: U.S. Census Bureau via ["tigris"](https://github.com/walkerke/tigris))
-21. `*tx_2m_temperature_ERA5_Oct_1_2022_May_30_2024_raw_NetCDF.nc` (Public Data From: European Centre for Medium-Range Weather Forecasts via ["krigR"](https://github.com/ErikKusch/KrigR))
-22. `*tx_2m_dewpoint_temperature_ERA5_Oct_1_2022_May_30_2024_raw_NetCDF.nc` (Public Data From: European Centre for Medium-Range Weather Forecasts via ["krigR"](https://github.com/ErikKusch/KrigR))
+19. `*tx_zctas_2020_geometry.rds` (Public Data From: U.S. Census Bureau via ["tigris"](https://github.com/walkerke/tigris), **File Size Too Large for Repository**)
+20. `*tx_zctas_2020_geometry_polygon.rds` (Public Data From: U.S. Census Bureau via ["tigris"](https://github.com/walkerke/tigris), **File Size Too Large for Repository**)
+21. `*tx_2m_temperature_ERA5_Oct_1_2022_May_30_2024_raw_NetCDF.nc` (Public Data From: European Centre for Medium-Range Weather Forecasts via ["krigR"](https://github.com/ErikKusch/KrigR), **File Size Too Large for Repository**)
+22. `*tx_2m_dewpoint_temperature_ERA5_Oct_1_2022_May_30_2024_raw_NetCDF.nc` (Public Data From: European Centre for Medium-Range Weather Forecasts via ["krigR"](https://github.com/ErikKusch/KrigR), **File Size Too Large for Repository**)
 23. `*ziptz_python_master_database_May2024 (2024-05-22).db` (Public Data From: ["ziptz"](https://github.com/infused/ziptz))
 24. `IECC_BA_climate_zones` (Folder) (Public Data From: International Energy Conservation Code + U.S. Department of Energy Building America Programme via ["GitHub (marsha5813)"](https://gist.github.com/marsha5813/b0279b4b0261634de358fca46e61e6f3))
 25. `NSAPH_zip_zcta_crosswalk` (Folder) (Public Data From: Harvard National Studies on Air Pollution and Health via ["Harvard Dataverse (Audirac, 2024)"](https://doi.org/10.7910/DVN/HYNJSZ))
