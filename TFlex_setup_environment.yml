@@ -1,0 +1,147 @@
+## Primers on the Use of (Micromamba) Virtual Environments  ----------------------
+## https://andrewpwheeler.com/2022/04/08/managing-r-environments-using-conda/
+## https://pythonspeed.com/articles/conda-dependency-management/
+## https://labs.epi2me.io/conda-or-mamba-for-production/
+## https://mamba.readthedocs.io/en/latest/installation.html
+## https://mamba.readthedocs.io/en/latest/user_guide/mamba.html
+## https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html
+## https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html#conda-yaml-spec-files
+
+
+
+## Initial Micromamba Set-up Post Installation ---------------------------------
+## micromamba config append channels conda-forge
+## micromamba config append channels r
+## micromamba self-update
+## micromamba shell completion 
+## micromamba env list
+
+
+
+## Set-up Micromamba Virtual Env. (Generic R + Python Tool Mix) ----------------
+## Use "--platform osx-64" instead of "--platform osx-arm64" 
+## Why? "osx-arm64" breaks loading of "r-rcppparallel" > needed for "rstanarm".
+## On platform, see: https://stackoverflow.com/a/77859741; https://stackoverflow.com/a/77963853
+
+## micromamba create --name TFlex --file=TFlex_setup_environment.yml --platform osx-64
+## micromamba activate TFlex
+## micromamba env export > TFlex_replication_environment.yml 
+## RScript TFlex_requirements.R     ## Install packages not available on Conda Forge from source.
+## micromamba deactivate
+## micromamba env remove --name TFlex 
+## micromamba clean --all
+
+
+
+## Begin Environment Specification (Basic) -------------------------------------
+name: TFlex
+channels:
+- conda-forge           ## https://anaconda.org/conda-forge
+# - dnachun             ## Channel with many osx-arm64 builds; https://anaconda.org/dnachun
+
+
+dependencies:
+## Python Packages -------------------------------------------------------------
+- python=3.11.4         ## Python interpreter installation controlled by Micromamba/Conda
+- conda-lock
+- pip
+- radian                ## Python-powered CLI-based R console; https://github.com/randy3k/radian
+- pymc
+- pytensor
+- statsmodels
+- linearmodels
+- numpy
+- pandas
+- patsy
+- formulaic
+- scikit-learn
+- scipy
+- xarray
+- arviz
+- plotnine
+- mizani
+- fastparquet
+- tabulate
+- cloudpickle
+- graphviz
+- ptpython              ## CLI-based Python console; https://github.com/randy3k/radian
+- pip:                  ## Installs using the Python-package manager https://stackoverflow.com/a/34315112; https://github.com/mamba-org/mamba/pull/2104
+    - rdrobust==1.2.0   ## For Regression Discontinuity Design; https://pypi.org/project/rdrobust/
+
+## R Packages ------------------------------------------------------------------
+## Some of the following are dependencies of non-conda-forge packages installed via R. See "_requirements.R"
+- r-base=4.3.3          ## R interpreter installation controlled by Micromamba/Conda
+- r-arrow               ## Used to read parquet files
+- r-bayesplot
+- r-bayestestr          ## https://easystats.github.io/bayestestR/
+- r-brms                ## Bayesian inference; https://anaconda.org/conda-forge/r-brms
+- r-broom
+- r-cmdstanr            ## Bayesian inference; https://anaconda.org/conda-forge/r-cmdstanr; https://anaconda.org/search?q=cmdstan
+- r-cobalt              ## https://anaconda.org/conda-forge/r-cobalt
+- r-collapse            ## https://github.com/SebKrantz/collapse
+- r-declaredesign       ## Experiment Design; also installs r-formula, r-fabricatr, r-randomizr, r-estimatr; https://anaconda.org/conda-forge/r-declaredesign
+- r-dplyr
+- r-fastdummies
+- r-fixest              ## Frequentist econometrics/causal inference; https://lrberge.github.io/fixest/; https://anaconda.org/conda-forge/r-fixest
+- r-forcats
+- r-formattable
+- r-future              ## Parallel processing functionality
+- r-future.apply
+- r-furrr
+- r-ggfx
+- r-ggh4x
+- r-ggplot2
+- r-ggfortify
+- r-ggrepel             ## https://ggrepel.slowkow.com/
+- r-ggdag
+- r-ggridges
+- r-gganimate
+- r-gt
+- r-gtsummary
+- r-igraph
+- r-rjava
+- r-knitr
+- r-latex2exp
+- r-lme4                ## Multilevel modelling functionality
+- r-lubridate
+- r-magrittr
+- r-marginaleffects     ## Principled comparison of regression coefficients
+- r-modelsummary
+- r-muhaz               ## https://cran.r-project.org/web/packages/muhaz/index.html
+- r-openxlsx
+- r-performance
+- r-rcppparallel
+- r-rcpparmadillo
+- r-readr               ## Lovely package for loading files of diverse types
+- r-readxl
+- r-rgdal
+- r-rsvg
+- r-terra 
+- r-sodium 
+- r-raster 
+- r-keyring 
+- r-fasterize
+- r-exactextractr 
+- r-remotes             ## Feature-rich package for installing R packages via R itself. See "_requirements.R"
+- r-rstan               ## Bayesian inference; https://anaconda.org/conda-forge/r-rstan; https://github.com/conda-forge/r-rstan-feedstock/
+- r-rstantools
+- r-see                 ## Reporting; also installs r-effectsize, r-parameters, r-correlation, r-modelbased
+- r-scales
+- r-shinystan
+- r-stringi
+- r-stringr
+- r-survival
+- r-survminer
+- r-svglite
+- r-testthat            ## https://anaconda.org/conda-forge/r-testthat
+- r-tibble
+- r-tidyr
+- r-tidybayes
+- r-tigris
+- r-xlsx
+- r-xlsxjars
+- r-zeallot             ## Lovely package for multiple-assignment functionality à la Python; https://github.com/r-lib/zeallot
+
+## Other Packages ------------------------------------------------------------------
+- cmdstan               ## Bayesian inference; https://mc-stan.org/users/interfaces/cmdstan
+- openjdk=8             ## https://github.com/conda/conda/issues/11330#issuecomment-1086270153; https://stackoverflow.com/a/70382146
