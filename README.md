@@ -77,7 +77,7 @@ Finally, I have left numerous comments/notes throughout the various scripts used
 
 <br>
 
-Thank you for interest in our work and please do contact me to ask any questions.
+Thank you for your interest in our work and please do contact us to ask any questions.
 
 **Author**: Cohen R. Simpson
 
