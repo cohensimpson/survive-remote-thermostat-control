@@ -129,6 +129,6 @@ In full, the repository contains the following files:
 ## Things to Keep In Mind
 1. The Micromamba/Conda virtual environment can be activated in any directory after its creation. Therefore, please make sure to change your working directory to the folder used to sore your copy of this repository so that the file paths in the various scripts (e.g., `TFlex_holds_mini_project_process_data.R`) are valid. Along this line, do note that the scripts that call data placed inside of sub-folders (e.g., `NSAPH_zip_zcta_crosswalk`) use path names reflective of nesting. 
 
-2. The code/analysis has been tested on macOS only. No guarantees are offered for Windows or Linux. See also, the STAN documentation (https://mc-stan.org/docs/reference-manual/reproducibility.html).
+2. The code/analysis has been tested on macOS only. No guarantees are offered for Windows or Linux. Also, see the Stan documentation (https://mc-stan.org/docs/reference-manual/reproducibility.html).
 
 3. As opposed to generating stand-alone files, in general, the R code to create the tables (e.g., see the bottom of `TFlex_holds_mini_project_results_estimates_tabular.R`) spits out LaTeX code which was pasted (in part) into the source script used to compile our paper. Final/exact table styling was achieved using LaTeX itself.
